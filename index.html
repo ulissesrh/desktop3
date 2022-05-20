@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HOME</title>
+		<script>
+			function showTime(){
+				let time = new Date(),
+				horas = time.getHours(),
+				minute = time.getMinutes();
+
+				if(horas<10) horas = "0"+horas;
+				if(minute<10) minute = "0"+minute;
+				var tempo = horas+":"+minute;
+
+				document.getElementById("timer").innerHTML=tempo;
+			}
+
+			function initTime(){
+				setInterval(showTime, 1000);
+			}
+		</script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap" rel="stylesheet">
+	</head>
+
+	<body onload="initTime();">
+		<div class="container">
+
+			<nav class="box" id="home">
+				<img src="img/logo.png">
+
+				<a href="#" class="box-nav">
+					<img src="img/icon/1.png">
+
+					<h1 class="hour" id="timer">LOADING</h1>
+				</a>
+
+				<a href="#" class="box-nav">
+					<img src="img/icon/2.png">
+
+					<h1>HOME</h1>
+				</a>
+
+				<a href="#" class="box-nav">
+					<img src="img/icon/3.png">
+
+					<h1>PROJECTS</h1>
+				</a>
+
+				<a href="#" class="box-nav">
+					<img src="img/icon/4.png">
+
+					<h1>CATS</h1>
+				</a>
+			</nav>
+
+		</div>
+	</body>
+</html>
